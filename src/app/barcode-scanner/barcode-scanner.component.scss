@@ -1,18 +1,18 @@
-#scanner-container {
-    width: 100%;
-    height: 100vh;
-    position: relative;
-    // background-color: black;
-    overflow: hidden;
-  }
+// #scanner-container {
+//     width: 100%;
+//     height: 100vh;
+//     position: relative;
+//     // background-color: black;
+//     overflow: hidden;
+//   }
   
-  #scanner-container video, 
-  #scanner-container canvas {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
+//   #scanner-container video, 
+//   #scanner-container canvas {
+//     width: 100% !important;
+//     height: 100% !important;
+//     object-fit: cover;
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//   }
   

@@ -26,8 +26,8 @@ export class BarcodeScannerComponent implements OnInit, OnDestroy {
         type: 'LiveStream',
         target: document.querySelector('#scanner-container')!,
         constraints: {
-          width: { ideal: 1280 },
-          height: { ideal: 720 },
+          width: { ideal: 800 },
+          height: { ideal: 600 },
           facingMode: 'environment' // câmera traseira
         }
       },
