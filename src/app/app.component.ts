@@ -1,13 +1,15 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, } from '@angular/core';
+import { BarcodeScannerComponent } from './barcode-scanner/barcode-scanner.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [BarcodeScannerComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
+
 export class AppComponent {
-  title = 'poc-barcode-zxing';
+  
+
 }
