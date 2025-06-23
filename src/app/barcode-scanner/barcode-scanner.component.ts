@@ -20,6 +20,7 @@ export class BarcodeScannerComponent implements OnInit, OnDestroy {
   }
 
   startScanner() {
+    this.barcode = '';
     Quagga.init({
       inputStream: {
         name: 'Live',
@@ -51,15 +52,22 @@ export class BarcodeScannerComponent implements OnInit, OnDestroy {
       const code = result.codeResult.code;
       this.barcode = code;
       console.log('Detected: ', code);
-
       // Se quiser parar após a primeira leitura:
-      // Quagga.stop();
-      // this.stopScanner();
+      Quagga.stop();
+      this.stopScanner();
     });
   }
 
   stopScanner() {
     Quagga.stop();
     Quagga.offDetected(() => {});
+    this.removeScannerElements();
+  }
+
+  removeScannerElements() {
+    const scannerContainer = document.querySelector('#scanner-container');
+    if (scannerContainer) {
+      scannerContainer.innerHTML = '';
+    }
   }
 }

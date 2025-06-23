@@ -1,4 +1,7 @@
-<h1 style="margin-bottom: 0rem;">Quagga2 BarCode Scanner</h1>
+<h1 style="margin-bottom: 1rem;">Quagga2 BarCode Scanner</h1>
+@if(barcode){
+<button style="margin-top: 1rem; margin-bottom: 1rem;" (click)="startScanner()">Ler Código de barras</button>
+<p style="font-size: 1.2rem; word-wrap: break-word;">Resultado: {{ barcode }}</p>
+}
 <div id="scanner-container">
-    <p style="font-size: 1.2rem;">Resultado: {{ barcode }}</p>
 </div>
