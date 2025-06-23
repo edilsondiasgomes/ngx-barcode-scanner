@@ -1,1 +1,8 @@
-<app-barcode-scanner></app-barcode-scanner>
+<button style="margin-top: .5rem; " (click)="switchScanner()">{{ quagga2 ? 'Mudar para Zxing-Scanner':'Mudar para Quagga2'}}</button>
+
+@if(quagga2){
+    <app-barcode-scanner></app-barcode-scanner>
+}
+@if(!quagga2){
+    <app-zxing-scanner></app-zxing-scanner>
+}
