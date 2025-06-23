@@ -1,0 +1,8 @@
+<h1 style="margin-bottom: 1rem;">Zxing BarCode Scanner</h1>
+@if(result){
+<p style="font-size: 1.2rem; word-wrap: break-word;">Resultado: {{ result }}</p>
+<button style="margin-bottom: 1rem;" (click)="result = ''">Ler outro código</button>
+}
+@if(!result){
+<zxing-scanner [formats]="allowedFormats" (scanSuccess)="scanCompleteHandler($event)"></zxing-scanner>
+}
