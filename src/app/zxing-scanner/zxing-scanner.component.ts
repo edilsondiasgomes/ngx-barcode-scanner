@@ -20,7 +20,7 @@ export class ZxingScannerComponent {
     BarcodeFormat.DATA_MATRIX,
     BarcodeFormat.ITF
   ];
-  result: any
+  result = '';
 
   scanCompleteHandler(result: any){
     this.result = result

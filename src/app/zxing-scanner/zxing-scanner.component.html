@@ -9,6 +9,7 @@
 <zxing-scanner
   [formats]="allowedFormats"
   [tryHarder]="true"
+  [autostart]="true"
   [torch]="true"
   (scanComplete)="scanCompleteHandler($event)"
 ></zxing-scanner>
