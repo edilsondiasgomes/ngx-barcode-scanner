@@ -3,7 +3,7 @@
 <p style="font-size: 1.2rem; word-wrap: break-word;">Resultado: {{ result }}</p>
 <button style="margin-bottom: 1rem;" (click)="result = ''">Ler outro código</button>
 }
-@if(!result){
+<!-- @if(!result){ -->
 <!-- <zxing-scanner [formats]="allowedFormats" (scanSuccess)="scanCompleteHandler($event)"></zxing-scanner> -->
 
 <zxing-scanner
@@ -13,4 +13,4 @@
   [torch]="true"
   (scanComplete)="scanCompleteHandler($event)"
 ></zxing-scanner>
-}
+<!-- } -->
