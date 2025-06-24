@@ -3,12 +3,11 @@
 <p style="font-size: 1.2rem; word-wrap: break-word;">Resultado: {{ result }}</p>
 <button style="margin-bottom: 1rem;" (click)="result = ''">Ler outro código</button>
 }
-<!-- @if(!result){ -->
-<zxing-scanner [formats]="allowedFormats" (scanSuccess)="scanCompleteHandler($event)"></zxing-scanner>
-
-<!-- <zxing-scanner
-  [formats]="allowedFormats"
-  [autostart]="true"
-  (scanComplete)="scanCompleteHandler($event)"
-></zxing-scanner> -->
-<!-- } -->
+@if(!result){
+    <zxing-scanner
+    [formats]="allowedFormats"
+    [torch]="true"
+    [tryHarder]="true"
+    (scanComplete)="scanCompleteHandler($event)">
+  </zxing-scanner>
+}

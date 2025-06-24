@@ -22,10 +22,9 @@ export class ZxingScannerComponent {
   ];
   result = '';
 
-  scanCompleteHandler(result: any){
-    this.result = result
-    console.log(result);
-    
+  scanCompleteHandler(result: any) {
+    console.log('Código detectado:', result);
+    this.result = result;
   }
 
 }
